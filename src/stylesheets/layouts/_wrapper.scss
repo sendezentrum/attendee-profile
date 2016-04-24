@@ -1,0 +1,15 @@
+.wrapper {
+	margin: 1rem auto 2rem;
+	max-width: 700px;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+@media print {
+	.wrapper {
+		margin: 0;
+		max-width: none;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

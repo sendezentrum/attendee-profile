@@ -1,0 +1,141 @@
+.page {
+	border: 1px solid $dark-gray;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.page__head-image {
+	max-width: 100%;
+	height: auto;
+}
+
+.page__inner {
+	padding: 1rem;
+}
+
+.page__photo {
+	border: 1px solid $light-gray;
+	position: relative;
+	padding-top: 69.23%;
+}
+
+.page__photo-inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+}
+
+.page__photo-inner--with-image {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transform: none;
+}
+
+.page__photo-src {
+	max-width: 100%;
+	height: auto;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+	position: absolute;
+}
+
+.page__field {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.page__label {
+	font-size: 0.8rem;
+	color: $middle-gray;
+	margin-bottom: 0.4rem;
+}
+
+.page__input {
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-bottom: 1px solid $light-gray;
+	padding-bottom: 0.2cm;
+
+	&:empty:before {
+		content: attr(data-placeholder);
+		color: $middle-gray;
+	}
+}
+
+.page__projects {
+	position: relative;
+	text-align: center;
+	padding: 1rem 0;
+}
+
+.page__project {
+	width: 30%;
+	padding-top: 30%;
+	display: inline-block;
+	margin: 0px 1%;
+	position: relative;
+	border: 1px solid $light-gray;
+	overflow: hidden;
+}
+
+.page__project-inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+}
+
+.page__project-inner--with-image {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transform: none;
+}
+
+.page__project-image {
+	max-width: 100%;
+	height: auto;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+	position: absolute;
+}
+
+.page__project-overlay {
+	background: #fff;
+	position: absolute;
+	bottom: 1.5rem;
+	left: 50%;
+	padding-left: 5px;
+	padding-right: 5px;
+	transform: translate(-50%, 0);
+}
+
+@media print {
+	.page {
+		border: 0;
+		margin: 0;
+	}
+
+	.page__inner {
+		padding: 1cm;
+	}
+
+	.page__input:empty:before,
+	.page__project-overlay {
+		display: none;
+	}
+
+	.page__project:not(.dz-max-files-reached) {
+		display: none;
+	}
+}

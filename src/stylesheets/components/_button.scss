@@ -1,0 +1,27 @@
+.button {
+	border: 0;
+	background: $subscribe-green;
+	font-family: inherit;
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+	padding: 10px 15px;
+	line-height: 1.4;
+	cursor: pointer;
+
+	&:hover, &:focus {
+		background: darken($subscribe-green, 10%);
+	}
+}
+
+.button--small {
+	font-size: 0.6rem;
+	padding: 5px 10px;
+}
+
+@media print {
+	.button {
+		display: none;
+	}
+}

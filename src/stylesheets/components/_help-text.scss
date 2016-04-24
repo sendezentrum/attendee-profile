@@ -1,0 +1,13 @@
+.help-text {
+	text-align: center;
+	color: $middle-gray;
+	font-size: 0.8rem;
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+}
+
+@media print {
+	.help-text {
+		display: none;
+	}
+}

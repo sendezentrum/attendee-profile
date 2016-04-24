@@ -1,0 +1,13 @@
+.logo {
+	width: 300px;
+}
+
+.logo__image {
+	fill: currentColor;
+}
+
+@media print {
+	.logo {
+		display: none;
+	}
+}

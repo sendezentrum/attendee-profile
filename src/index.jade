@@ -1,0 +1,59 @@
+doctype html
+html(lang="de", mozNoMarginBoxes)
+	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="x-ua-compatible", content="ie=edge")
+
+		title SUBSCRIBE 7: Teilnehmer_in-Profil
+
+		link(rel="stylesheet", href="stylesheets/main.css")
+
+	body
+		header.header
+			h1.logo: svg.logo__image(viewBox="0 0 200 36.86", role="img", aria-labelledby="logo-title")
+				title#logo-title SUBSCRIBE 7
+				use(xlink:href="icons/icons.svg#subscribe-logo")
+
+		main.wrapper
+			.lead
+				p #[strong Wir freuen uns dich auf der SUBSCRIBE 7 begrüßen zu dürfen.] Austausch ist wichtiger Bestandteil unserer Veranstaltung. Damit jede_r weiß wer wer ist wollen wir auch dieses Jahr wieder Steckbriefe aller Teilnehmenden aufhängen. Nutze dieses Tool um dein Profil zu erstellen und es dann ausgedruckt (auf A4) mitzubringen.
+				p Falls du heute noch kein passendes Foto (oder kein Farbdrucker) hast ist das kein Problem. Vor Ort haben wir eine Kamara und einen Fotodrucker und machen gerne ein Foto von dir. Bring bitte trotzdem schon mal dein ausgefülltes Profil mit. Damit geht alles schneller :)
+
+			section.page
+				header.page__head
+					img.page__head-image(src="images/page-head.png", alt="Logo der SUBSCRIBE 7")
+
+				.page__inner
+					.page__photo#photo-upload
+						.page__photo-inner#photo-upload-helper
+							.help-text Ziehe hier einfach ein Foto von dir per Drag'n'Drog hinein oder nutze die Dateiauswahl.
+							button.button(type="button") Foto auswählen
+						template#photo-upload-preview: .page__photo-inner.page__photo-inner--with-image
+							img.page__photo-src(data-dz-thumbnail)
+
+					.page__projects
+						.page__project: .page__project-inner.page__project-inner--with-button
+							button.button.button--small(type="button") Logo auswählen
+						.page__project: .page__project-inner
+							button.button.button--small(type="button") Logo auswählen
+						.page__project: .page__project-inner
+							button.button.button--small(type="button") Logo auswählen
+						.page__project-overlay
+							.help-text Ziehe hier einfach Projektlogos von dir per Drag'n'Drog hinein oder nutze die Dateiauswahl.
+						template#project-upload-preview: .page__project-inner.page__project-inner--with-image
+							img.page__project-image(data-dz-thumbnail)
+
+					.page__field
+						.page__label Hallo, ich bin
+						.page__input(contentEditable="true", data-placeholder="Dein Name")
+
+					.page__field
+						.page__label Im Sendegate heiße ich
+						.page__input(contentEditable="true", data-placeholder="Dein Sendegate-Nickname")
+
+			footer.footer
+				p Alles ausgefüllt? Dein Foto und deine Projektlogos ausgewählt? Super! Jetzt drucke dein Profil aus und bringe es mit. Tipp: Deaktiviere noch Titel- und Fußzeile beim Drucken (Safari &amp; Internet Explorer/Edge).
+				p: button.button(data-action="print", type="button") Profil ausdrucken
+
+		script(src="javascripts/app.js", async)

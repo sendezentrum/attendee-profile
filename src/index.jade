@@ -48,9 +48,19 @@ html(lang="de", mozNoMarginBoxes)
 						.page__label Hallo, ich bin
 						.page__input(contentEditable="true", data-placeholder="Dein Name")
 
-					.page__field
+					.page__field.page__field--50
 						.page__label Im Sendegate heiße ich
-						.page__input(contentEditable="true", data-placeholder="Dein Sendegate-Nickname")
+						.page__input(contentEditable="true", data-placeholder="Sendegate-Nickname")
+
+					.page__field.page__field--50
+						.page__label Auf Twitter heiße ich
+						.page__input(contentEditable="true", data-placeholder="Twitter-Nickname")
+
+					.clearfix
+
+					.page__field
+						.page__label Hashtags, Links &amp; mehr
+						.page__input(contentEditable="true", data-placeholder="Hier ist Platz für weitere Informationen über dich. Zum Beispiel Hashtags oder URLs.")
 
 			footer.footer
 				p Alles ausgefüllt? Dein Foto und deine Projektlogos ausgewählt? Super! Jetzt drucke dein Profil aus und bringe es mit. Tipp: Deaktiviere noch Titel- und Fußzeile beim Drucken (Safari &amp; Internet Explorer/Edge).

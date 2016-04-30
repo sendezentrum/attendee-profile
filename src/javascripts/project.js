@@ -1,7 +1,5 @@
 import $ from 'jquery'
-import Dropzone from 'dropzone'
-
-Dropzone.autoDiscover = false
+import Dropzone from './dropzone'
 
 $(function() {
 	$('.page__project').each(function(index, el) {
